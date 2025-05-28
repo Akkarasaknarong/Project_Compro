@@ -70,6 +70,7 @@ void Game::HandleInput()
     }
     else if (keyPressed == KEY_DOWN)
     {
+        score += 1;
         MoveBlockDown();
     }
     else if (keyPressed == KEY_LEFT)

@@ -29,13 +29,13 @@ int main()
         // Setup system game
         UpdateMusicStream(game.music);
         game.HandleInput();
-        if (EventTriggered(0.25))
+        if (EventTriggered(0.01))
         {
             game.MoveBlockDown();
         }
         if (game.gameOver)
         {
-            DrawTextEx(font, "GAME OVER", {320, 450}, 38, 2, WHITE);
+            DrawTextEx(font, "GAME OVER", {320, 450}, 38, 1, WHITE);
         }
         DrawRectangleRounded({320, 55, 170, 60}, 0.3, 6, darkGrey);
         BeginDrawing();
