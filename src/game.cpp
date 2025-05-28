@@ -198,19 +198,17 @@ void Game::Reset()
 
 void Game::UpdateScore(int linesCleared, int moveDownPoints)
 {
-    switch (linesCleared)
+    if (linesCleared == 1)
     {
-    case 1:
         score += 100;
-        break;
-    case 2:
+    }
+    else if (linesCleared == 2)
+    {
         score += 300;
-        break;
-    case 3:
+    }
+    else if (linesCleared == 3)
+    {
         score += 500;
-        break;
-    default:
-        break;
     }
 
     score += moveDownPoints;
