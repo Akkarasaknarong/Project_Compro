@@ -56,6 +56,5 @@ int main()
         game.Draw();
         EndDrawing();
     }
-
     CloseWindow();
 }

@@ -2,7 +2,7 @@
 #include <raylib.h>
 #include <vector>
 
-// ประกาศตัวแปร extern
+// Setup All Color
 extern Color darkGrey;
 extern Color green;
 extern Color red;

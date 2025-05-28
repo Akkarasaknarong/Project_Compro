@@ -8,18 +8,20 @@ class Block
 {
 public:
     Block();
-    void Draw(int offsetX, int offsetY);
-    void Move(int rows, int columns);
-    std::vector<Position> GetCellPositions();
-    void Rotate();
-    void UndoRotation();
+
+    void Draw(int offsetX, int offsetY);  // Draw Block
+    void Move(int rows, int columns);     // Move Block
+    void Rotate();                        // Rotate Block
+    void UndoRotation();                  // Check If the block is collistion things
+
     int id;
+    std::vector<Position> GetCellPositions();
     std::map<int, std::vector<Position>> cells;
 
 private:
     int cellSize;
     int rotationState;
-    std::vector<Color> colors;
     int rowOffset;
     int columnOffset;
+    std::vector<Color> colors;
 };

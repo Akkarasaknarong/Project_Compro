@@ -7,28 +7,27 @@ class Game
 public:
     Game();
     ~Game();
-    void Draw();
-    void HandleInput();
-    void MoveBlockDown();
+
+    void Draw();             // Draw game
+    void HandleInput();      // get HandleInput      
+    void MoveBlockDown();    // MoveBlockDown
     bool gameOver;
+
     int score;
     Music music;
 
 private:
-    void MoveBlockLeft();
-    void MoveBlockRight();
-    void RotateBlock();
-
-    void LockBlock();
-    bool BlockFits();
-    bool IsBlockOutside();
-
-    void Reset();
-    void UpdateScore(int linesCleared, int moveDownPoints);
+    void MoveBlockLeft();     // MoveBlockLeft
+    void MoveBlockRight();    // MoveBlockRight
+    void RotateBlock();       // RotateBlock
+    void LockBlock();         // Check if the block is on the ground
+    bool BlockFits();         // Check If block is collision other block
+    bool IsBlockOutside();    // Check if the block is Outside
+    void Reset();             // Reset Game
+    void UpdateScore(int linesCleared, int moveDownPoints);  // UpdateScore
 
     Block GetRandomBlock();
     std::vector<Block> GetAllBlocks();
-
     Grid grid;  
     std::vector<Block> blocks;
     Block currentBlock;
