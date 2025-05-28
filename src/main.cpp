@@ -19,7 +19,7 @@ bool EventTriggered(double interval)
 int main()
 {
     // Setup system game
-    InitWindow(500, 620, "raylib Tetris");
+    InitWindow(500, 620, "Tetris_G3");
     SetTargetFPS(60);
     Font font = LoadFontEx("Font/monogram.ttf", 64, 0, 0);
     Game game = Game();
@@ -29,7 +29,7 @@ int main()
         // Setup system game
         UpdateMusicStream(game.music);
         game.HandleInput();
-        if (EventTriggered(0.2))
+        if (EventTriggered(0.25))
         {
             game.MoveBlockDown();
         }

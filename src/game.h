@@ -17,15 +17,19 @@ public:
 private:
     void MoveBlockLeft();
     void MoveBlockRight();
-    Block GetRandomBlock();
-    std::vector<Block> GetAllBlocks();
-    bool IsBlockOutside();
     void RotateBlock();
+
     void LockBlock();
     bool BlockFits();
+    bool IsBlockOutside();
+
     void Reset();
     void UpdateScore(int linesCleared, int moveDownPoints);
-    Grid grid;
+
+    Block GetRandomBlock();
+    std::vector<Block> GetAllBlocks();
+
+    Grid grid;  
     std::vector<Block> blocks;
     Block currentBlock;
     Block nextBlock;
